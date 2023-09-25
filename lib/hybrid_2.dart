@@ -2,11 +2,11 @@ import 'dart:math';
 import 'dart:io';
 
 class Lucky {
-  int? randomNumber;
+  final int min = int.tryParse(Platform.environment['MIN'] ?? '0') ?? 0;
+  final int max = int.tryParse(Platform.environment['MAX'] ?? '10') ?? 0;
+  int randomNumber = 0;
 
   Lucky(){
-    int min = 0;
-    int max = 50;
 
     final random = Random();
     randomNumber = min + random.nextInt(max - min + 1);
