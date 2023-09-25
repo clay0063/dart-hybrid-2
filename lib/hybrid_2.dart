@@ -7,7 +7,7 @@ class Lucky {
   late int randomNumber;
 
   Lucky(){
-    final random = Random();
-    randomNumber = min + random.nextInt(max - min + 1);
+    int range = max - min;
+    randomNumber = Random().nextInt(range) + min;
   }
 }
