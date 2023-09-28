@@ -1,4 +1,4 @@
-import 'package:hybrid_2/hybrid_2.dart' as hybrid_2;
+import 'package:hybrid_2/main.dart' as hybrid_2;
 
 void main(List<String> arguments) {
   if (arguments.isEmpty) {
