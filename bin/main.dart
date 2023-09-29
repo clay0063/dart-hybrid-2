@@ -6,8 +6,8 @@ void main(List<String> arguments) {
   } else {
     for (String arg in arguments){
       String name = arg[0].toUpperCase() + arg.substring(1);
-      final randomNumber = hybrid_2.Lucky();
-      print('Hello $name. Your lucky number is ${randomNumber.randomNumber}.');
+      final lucky = hybrid_2.Lucky();
+      print('Hello $name. Your lucky number is ${lucky.randomNumber()}.');
     } 
   }
 }

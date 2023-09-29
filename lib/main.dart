@@ -5,17 +5,18 @@ class Lucky {
   int min = int.tryParse(Platform.environment['MIN'] ?? '0') ?? 0; 
   int max = int.tryParse(Platform.environment['MAX'] ?? '10') ?? 10;
   //takes these assigned variables from the terminal environment, but if they don't exist, assign them to 0 - 10
-  
-  late int randomNumber;
-  //assures that random will be initialized when constructor is called
 
-  Lucky(){
+  Lucky();
+
+  int randomNumber(){
     if (min > max) {
       int temp = min;
       min = max;
       max = temp;
     }
     int range = max - min;
-    randomNumber = Random().nextInt(range) + min;
+    return Random().nextInt(range) + min;
   }
+
+
 }
